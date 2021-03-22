@@ -1,0 +1,220 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\textwidth 10.8cm
+\textheight 15.5cm
+\hoffset=0.5cm \voffset=2cm \baselineskip=12pt plus 2pt
+
+\usepackage{amsmath}
+
+\begin{document}
+$y' = f(x,y)$, \ $y' = Ay$,\ $A$ - матрица
+
+
+\begin{center}
+Квадрат. формулы.
+\end{center}
+
+$\int\limits_a^b g(x)dx = \int\limits_a^b \rho(x)f(x)dx \ \fbox{$\approx$}$
+
+
+
+Для веса нужно существование всех моментов:
+
+$\ \ \ \mu_k(x) = \int\limits_a^b \rho(x)x^kdx, \ \ \ k = 0, 1,\ldots$
+
+
+\begin{equation*}
+\quad \fbox{$\approx$}
+ \begin{cases}
+   \sum\limits_{k=1}^n A_k \, \rho(x_k) \, f(x_k),
+   \\
+   \sum\limits_{k=1}^n B_k \, f(x_k),
+ \end{cases}
+\end{equation*}
+
+
+Пусть $\int\limits_0^1 xf(x)dx \approx$
+\begin{equation*}
+\quad \approx
+ \begin{cases}
+   \sum\limits_{k=1}^n A_k \, \rho(x_k) \, f(x_k),
+   \\
+   \sum\limits_{k=1}^n B_k \, f(x_k),
+ \end{cases}
+\end{equation*}
+
+$\int\limits_0^1 xf(x)dx = A_1(x, f(x))|_{x=0} +  A_2(x, f(x))|_{x=1}$ \ --- \ ИКФ(интерп. квадр. ф-ла)
+
+Требуем точна для:
+
+1. $f = 1$
+
+2. $f = x$
+\\
+
+1. $\displaystyle{\frac{1}{2} = A_2}$
+
+\centerline{не получается}
+
+2. $\displaystyle{\frac{1}{3} = A_2}$
+
+
+
+\newpage
+
+
+
+Пусть $\int\limits_0^1 xf(x)dx \approx A_1f(0) + A_2f(1)\fbox{=}$
+
+{
+\setlength{\leftskip}{3em}
+$f = 1 \ \ \ \ \displaystyle{\frac{1}{2}} = A_1 + A_2 \ \ \Rightarrow A_1 = \displaystyle{\frac{1}{2}} - \displaystyle{\frac{1}{3}} = \displaystyle{\frac{1}{6}}$
+\\
+
+$f = x \ \ \ \ \displaystyle{\frac{1}{3}} = A_2$
+
+}
+
+$\fbox{=} \ \displaystyle{\frac{1}{6}}f(0) + \displaystyle{\frac{1}{3}}f(1)$
+\\
+
+$f = x^2 \ \ \ \ \displaystyle{\frac{1}{4}} \approx \displaystyle{\frac{1}{3}} = A_2$
+\\
+
+{
+\setlength{\leftskip}{3em}
+Строим формулу Гаусса:
+
+}
+
+$\int\limits_0^1 xf(x)dx \approx A_1f(x_1) + A_2f(x_2), $ АСТ = $3; \fbox{2n - 1}$
+
+$w_2(x) = (x - x_1)(x - x_2) = x^2 + ax + b$
+
+$P_n^{(0, 1)}(x)$
+
+$\int\limits_0^1 x(x^2 + ax + b)x^kdx = 0, \ k = 0, 1$
+
+\centerline{Вычисление элементарных функций.}
+
+$f(x) = e^x$
+
+$10^{-308} \leq |y| \leq 10^{308}$
+
+$e^x = \sum\limits_{k=0}^\infty \frac{x^k}{k!} = \sum\limits_{k=0}^\infty a_k(x) \ \ $ (признак Даламбера)
+
+{
+\setlength{\leftskip}{3em}
+
+$\displaystyle{\frac{a_{k+1}(x)}{a_k(x)}} = \displaystyle{\frac{x^{k+1}}{(k+1)!}} \cdot \displaystyle{\frac{k!}{x^k}} = \displaystyle{\frac{x}{k+1}} = R_k \ (*)$
+
+}
+\newpage
+
+
+
+$a_{k+1} = a_kR_k \ (*)$
+
+$\left| \displaystyle{\frac{x}{k+1}} \right| > 1 \ $ для $1 + k < |x|$
+\\
+
+\fbox{ТУТ ГРАФИКИ}
+\\
+
+$|a_k| = \displaystyle{\frac{|x^k|}{k!}} \leq \displaystyle{\frac{k^k}{k!}}$
+
+$x = -10 \Rightarrow |a_{10}(10)| \sim \displaystyle{\frac{10^{10}}{10!}} \sim \displaystyle{\frac{10^{10}}{3,6 \cdot 10^6}} \approx 10^3$
+
+$e^{-10} \approx 10^{-10\, lge} \approx 10^{-4}$
+
+\fbox{ТУТ РИСУНОК}
+\newpage
+
+
+
+$sin(x) = sin\underbrace{\left( x-\left[ \frac{x}{2\pi}\right]2\pi \right)}_{x_1}$
+
+$e^x = 2^{x\log_2e} = 2^y = 2^{[y]}\cdot 2^{\{y\}}$, $\{y\}$ -- дробная часть от числа
+
+$2^{\{y\}} = e^{\{y\} \ln 2} = e^z, \ |z| < 1$
+
+$e^x \approx P_n(x) = \sum\limits_{k=0}^n a_k x^k, \ -1 \leq x \leq 1$
+
+$e^x - P_n(x) = \displaystyle{\frac{(e^x)^{n + 1}}{(n + 1)!}} x^{n + 1}$
+
+$\displaystyle{\frac{e^{-1}}{(n + 1)!}} \leq |e^x - P_n(x)| \leq \displaystyle{\frac{e}{(n + 1)!}}
+\leq \epsilon$
+\\
+
+$f(x) = e^x$ интерп. на $[-1; 1]$
+
+$x_k^{(n)}\!: \ T_{n + 1}(x_k^{(n)}) = 0$ -- многочлен Чебышёва 1-го рода, $x_k^{(n)}$ -- узлы
+
+$x_k^{(n)} = cos\left(\frac{2k + 1}{2(n + 1)}\pi\right); \ k = 0, \pi$
+
+$f(x) - Ln(x) = \displaystyle{\frac{f^{(n + 1)}(\xi)}{(n + 1)!}}w_{n + 1}(x)$
+
+$w_{n + 1} = \prod\limits_{k=0}^n (x - x_k^{(n)}) = T_{n + 1}(x)\cdot \displaystyle{\frac{1}{2^n}}$
+\newpage
+
+
+
+$|f(x) - Ln(x)| \leq \displaystyle{\frac{e}{(n + 1)!}}\cdot \displaystyle{\frac{1}{2^n}}$ \ (лучше в $2^n$ раз)
+
+$P_n(x) = \sum\limits_{k=0}^n d_kT_k(x) \fbox{=}$ -- переразложение по мног. Чебыш.
+
+{
+\setlength{\leftskip}{10.9em}
+1-го рода
+
+}
+$\fbox{=} \sum\limits_{k=0}^{n-m} \alpha_kT_k(x) = \beta_0 + \cdots + \beta_{n - m}x^{n - m}, $
+а дальше по
+
+{
+\setlength{\leftskip}{20em}
+схеме Горнера
+
+}
+
+$\ln (x), \ \ x > 0$
+\\
+
+
+Р/м \ \ \ $\ln \displaystyle{\frac{1 + x}{1 - x}} = \ln (1 + x) - \ln (1 - x) \ \fbox{=}$
+\\
+
+$\fbox{=}\ x - \displaystyle{\frac{x^2}{2}} + \displaystyle{\frac{x^3}{3}} + \cdots - \cdots \approx P_n(x)$
+
+\begin{center}
+Метод регуляризации для
+\\
+
+реш. инт-ых ур-ний 1-го рода.
+\end{center}
+
+$Az = u$
+
+$\int\limits_0^1 k(s, t)z(t)dt = u(s), \ 0 \leq s \leq 1$
+
+$A\!: \mathbb{Z} \rightarrow U$
+
+$||A||\!: \ 1)\ ||A||_{C \rightarrow C} = \max\limits_s \int\limits_0^1 |k(s t)|dt$
+
+2) \ $||A||_{L_2 \rightarrow L_2} \leq \sqrt{\int\limits_0^1 \int\limits_0^1 |k(s, t)|^2ds\, dt} = 
+\displaystyle{\frac{1}{\sqrt{\lambda_1}}}$
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
